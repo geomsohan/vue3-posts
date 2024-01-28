@@ -6,11 +6,10 @@ module.exports = {
 	extends: [
 		'plugin:vue/vue3-essential',
 		'eslint:recommended',
-		'@vue/eslint-config-prettier/skip-formatting',
+		'@vue/eslint-config-prettier',
 	],
-	parserOptions: {
-		ecmaVersion: '2024',
-		//sourceType: 'modules',
+	env: {
+		'vue/setup-compiler-macros': true,
 	},
 	rules: {
 		'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
